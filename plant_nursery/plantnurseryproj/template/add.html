@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Plant</title>
+</head>
+<body>
+<form  method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="cod" placeholder="Plant code"><br>
+    <input type="text" name="name" placeholder="Plant name"><br>
+    <input type="text" name="type" placeholder="Plant category"><br>
+    <input type="number" name="rate" placeholder="Plant rate"><br>
+    <input type="file" name="img"><br>
+    <input type="submit">
+</form>
+</body>
+</html>

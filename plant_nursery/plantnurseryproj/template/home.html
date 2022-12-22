@@ -1,0 +1,29 @@
+
+{%  extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for i in plant %}
+        <div class="col-mb-3">
+
+            <div class="card" style="width: 18rem;">
+
+             <img class="card-img-top" src="{{i.img.url}}" alt="Card image cap" height="250px">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.pcod}}</h5>
+                        <p class="card-text">{{i.pname}}</p>
+                        <a href="{% url 'plantnurseryapp:detail' i.id%}" class="btn btn-primary">Show details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+
+<!--&lt;!&ndash;  {{i.pcod}} &ndash;&gt; {{i.pname}} &ndash;&gt; {{i.pcat}}<br>&ndash;&gt;-->
+<!--&lt;!&ndash;<a href="plant/{{i.id}}">{{i.pname}}</a><br> #calling by id generated in auto in models.py&ndash;&gt;-->
+<!--<img src="{{i.img.url}}" width="100" height="100">-->
+<!--<a href="{% url 'plantnurseryapp:detail' i.id%}">{{i.pname}}</a><br>-->

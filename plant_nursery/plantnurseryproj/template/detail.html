@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<img src="{{plant.img.url}}" width="100" height="100"><br>
+<b>Code:</b> {{plant.pcod}}<br>
+<b>Name:</b> {{plant.pname}} <br>
+<b>Category :</b>  {{plant.pcat}}<br>
+<b>Rate: </b> {{plant.rate}}<br>
+<a class="btn btn-warning" href="{% url 'plantnurseryapp:update' plant.id %}">Update</a>
+<a class="btn btn-danger" href="{% url 'plantnurseryapp:delete' plant.id %}">Delete</a>
+{% endblock %}
